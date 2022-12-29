@@ -1,0 +1,17 @@
+.list-group-item {
+  border: none;
+}
+.all-page {
+  margin-top: 50px;
+}
+.current-degree {
+  font-size: 30px;
+}
+.weather-icon {
+  color: blue;
+  font-size: 30px;
+  text-align: center;
+}
+.day-week {
+  font-size: 30px;
+}

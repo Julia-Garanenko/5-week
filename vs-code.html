@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Weather app</title>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/8fb04cd051.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="container border all-page">
+      <div class="row p-4">
+        <div class="col-8">
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter a city..."
+              aria-label="Enter a city..."
+              aria-describedby="button-addon2"
+              id="cityInput"
+            />
+            <button type="button" class="btn btn-primary" id="button-search">
+              Search
+            </button>
+          </div>
+        </div>
+        <div class="col-4">
+          <button type="button" class="btn btn-success" id="button-current">
+            Current
+          </button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-9">
+          <div class="row"></div>
+          <ul class="list-group">
+            <li class="list-group-item" id="cityName">City</li>
+            <li class="list-group-item" id="day-time">Day time</li>
+            <li class="list-group-item">Weather</li>
+          </ul>
+          <div class="row">
+            <div class="col-9 current-degree" id="currentDegree">
+              Current degree
+            </div>
+            <div class="col-3">
+              <ul class="list-group">
+                <li class="list-group-item">
+                  precipitation: <span id="precipitation">precipitation</span> %
+                </li>
+                <li class="list-group-item">
+                  Wind:<span id="wind">wind</span> km/h
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-1"></div>
+
+            <div class="col-2">
+              <ul class="list-group">
+                <li class="list-group-item day-week">Mon</li>
+                <li class="list-group-item">
+                  <i class="fa-solid fa-cloud weather-icon"></i>
+                </li>
+                <li class="list-group-item">19°</li>
+              </ul>
+            </div>
+            <div class="col-2">
+              <ul class="list-group">
+                <li class="list-group-item day-week">Tue</li>
+                <li class="list-group-item">
+                  <i class="fa-solid fa-cloud weather-icon"></i>
+                </li>
+                <li class="list-group-item">19°</li>
+              </ul>
+            </div>
+            <div class="col-2">
+              <ul class="list-group">
+                <li class="list-group-item day-week">Wed</li>
+                <li class="list-group-item">
+                  <i class="fa-solid fa-cloud weather-icon"></i>
+                </li>
+                <li class="list-group-item">19°</li>
+              </ul>
+            </div>
+            <div class="col-2">
+              <ul class="list-group">
+                <li class="list-group-item day-week">Thu</li>
+                <li class="list-group-item">
+                  <i class="fa-solid fa-cloud weather-icon"></i>
+                </li>
+                <li class="list-group-item">19°</li>
+              </ul>
+            </div>
+            <div class="col-2">
+              <ul class="list-group">
+                <li class="list-group-item day-week">Fri</li>
+                <li class="list-group-item">
+                  <i class="fa-solid fa-cloud weather-icon"></i>
+                </li>
+                <li class="list-group-item">19°</li>
+              </ul>
+            </div>
+
+            <div class="col-1"></div>
+          </div>
+        </div>
+        <div class="col-3">
+          <img src="images/paris.jfif" />
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/index.js"></script>
+  </body>
+</html>
