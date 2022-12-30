@@ -15,3 +15,10 @@
 .day-week {
   font-size: 30px;
 }
+.link-to-open-source {
+  margin-left: 93px;
+  padding: 12px;
+}
+.link {
+  text-decoration: none;
+}
