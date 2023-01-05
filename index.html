@@ -21,113 +21,118 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <div class="container border all-page">
-      <div class="row p-4">
-        <div class="col-8">
-          <div class="input-group mb-3">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Enter a city..."
-              aria-label="Enter a city..."
-              aria-describedby="button-addon2"
-              id="cityInput"
-            />
-            <button type="button" class="btn btn-primary" id="button-search">
-              Search
+    <div class="container main">
+      <div class="container border all-page">
+        <div class="row p-4 input-margin">
+          <div class="col-10">
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                class="form-control input-color"
+                placeholder="Enter a city..."
+                aria-label="Enter a city..."
+                aria-describedby="button-addon2"
+                id="cityInput"
+              />
+
+              <button type="button" class="btn btn-primary" id="button-search">
+                Search
+              </button>
+            </div>
+          </div>
+          <div class="col-2">
+            <button type="button" class="btn btn-success" id="button-current">
+              Current
             </button>
           </div>
         </div>
-        <div class="col-4">
-          <button type="button" class="btn btn-success" id="button-current">
-            Current
-          </button>
+        <hr />
+        <div class="row after-input">
+          <div class="row">
+            <ul class="list-group">
+              <li class="list-group-item" id="cityName">City</li>
+              <li class="list-group-item" id="day-time">Day time</li>
+              <li class="list-group-item">Weather</li>
+            </ul>
+          </div>
+          <div class="row">
+            <div class="col-8 current-degree" id="currentDegree">
+              Current degree
+            </div>
+            <div class="col-4">
+              <ul class="list-group">
+                <li class="list-group-item">
+                  precipitation: <span id="precipitation"></span> %
+                </li>
+                <li class="list-group-item">
+                  Wind:<span id="wind"></span> km/h
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-1"></div>
+
+            <div class="col-2 day-week-margin">
+              <ul class="list-group">
+                <li class="list-group-item day-week">Mon</li>
+                <li class="list-group-item">
+                  <i class="fa-solid fa-cloud weather-icon"></i>
+                </li>
+                <li class="list-group-item">19°</li>
+              </ul>
+            </div>
+            <div class="col-2 day-week-margin">
+              <ul class="list-group">
+                <li class="list-group-item day-week">Tue</li>
+                <li class="list-group-item">
+                  <i class="fa-solid fa-cloud weather-icon"></i>
+                </li>
+                <li class="list-group-item">19°</li>
+              </ul>
+            </div>
+            <div class="col-2 day-week-margin">
+              <ul class="list-group">
+                <li class="list-group-item day-week">Wed</li>
+                <li class="list-group-item">
+                  <i class="fa-solid fa-cloud weather-icon"></i>
+                </li>
+                <li class="list-group-item">19°</li>
+              </ul>
+            </div>
+            <div class="col-2 day-week-margin">
+              <ul class="list-group">
+                <li class="list-group-item day-week">Thu</li>
+                <li class="list-group-item">
+                  <i class="fa-solid fa-cloud weather-icon"></i>
+                </li>
+                <li class="list-group-item">19°</li>
+              </ul>
+            </div>
+            <div class="col-2 day-week-margin">
+              <ul class="list-group">
+                <li class="list-group-item day-week">Fri</li>
+                <li class="list-group-item">
+                  <i class="fa-solid fa-cloud weather-icon"></i>
+                </li>
+                <li class="list-group-item">19°</li>
+              </ul>
+            </div>
+
+            <div class="col-1"></div>
+          </div>
         </div>
       </div>
-      <hr />
-      <div class="row">
-        <div class="row">
-          <ul class="list-group">
-            <li class="list-group-item" id="cityName">City</li>
-            <li class="list-group-item" id="day-time">Day time</li>
-            <li class="list-group-item">Weather</li>
-          </ul>
-        </div>
-        <div class="row">
-          <div class="col-9 current-degree" id="currentDegree">
-            Current degree
-          </div>
-          <div class="col-3">
-            <ul class="list-group">
-              <li class="list-group-item">
-                precipitation: <span id="precipitation"></span> %
-              </li>
-              <li class="list-group-item">Wind:<span id="wind"></span> km/h</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-1"></div>
-
-          <div class="col-2">
-            <ul class="list-group">
-              <li class="list-group-item day-week">Mon</li>
-              <li class="list-group-item">
-                <i class="fa-solid fa-cloud weather-icon"></i>
-              </li>
-              <li class="list-group-item">19°</li>
-            </ul>
-          </div>
-          <div class="col-2">
-            <ul class="list-group">
-              <li class="list-group-item day-week">Tue</li>
-              <li class="list-group-item">
-                <i class="fa-solid fa-cloud weather-icon"></i>
-              </li>
-              <li class="list-group-item">19°</li>
-            </ul>
-          </div>
-          <div class="col-2">
-            <ul class="list-group">
-              <li class="list-group-item day-week">Wed</li>
-              <li class="list-group-item">
-                <i class="fa-solid fa-cloud weather-icon"></i>
-              </li>
-              <li class="list-group-item">19°</li>
-            </ul>
-          </div>
-          <div class="col-2">
-            <ul class="list-group">
-              <li class="list-group-item day-week">Thu</li>
-              <li class="list-group-item">
-                <i class="fa-solid fa-cloud weather-icon"></i>
-              </li>
-              <li class="list-group-item">19°</li>
-            </ul>
-          </div>
-          <div class="col-2">
-            <ul class="list-group">
-              <li class="list-group-item day-week">Fri</li>
-              <li class="list-group-item">
-                <i class="fa-solid fa-cloud weather-icon"></i>
-              </li>
-              <li class="list-group-item">19°</li>
-            </ul>
-          </div>
-
-          <div class="col-1"></div>
-        </div>
-      </div>
+      <p class="link-to-open-source">
+        <a
+          href="https://github.com/Julia-Garanenko/5-week"
+          target="blank"
+          class="link"
+          >Open-source code</a
+        >, by Julia Garanenko
+      </p>
     </div>
-    <p class="link-to-open-source">
-      <a
-        href="https://github.com/Julia-Garanenko/5-week"
-        target="blank"
-        class="link"
-        >Open-source code</a
-      >, by Julia Garanenko
-    </p>
     <script type="text/javascript" src="js/index.js"></script>
   </body>
 </html>

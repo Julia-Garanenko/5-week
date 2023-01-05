@@ -1,11 +1,21 @@
 .list-group-item {
+  color: #363434;
   border: none;
 }
-.all-page {
-  margin-top: 50px;
+.main {
+  font-family: Cerebri-Sans, Helvetica, Arial, sans-serif;
+  margin: 60px auto;
+  width: 50%;
 }
+.all-page {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 25px;
+}
+
 .current-degree {
   font-size: 30px;
+  color: #363434;
 }
 .weather-icon {
   color: blue;
@@ -15,10 +25,32 @@
 .day-week {
   font-size: 30px;
 }
+day-week-margin {
+  padding: 10px 40px;
+}
 .link-to-open-source {
   margin-left: 93px;
   padding: 12px;
 }
 .link {
   text-decoration: none;
+}
+hr {
+  margin: 0;
+}
+.input-margin {
+  padding: 10px !important;
+}
+body {
+  background-color: #f9f7fe;
+}
+.after-input {
+  margin: 10px auto;
+}
+.form-control:focus,
+.form-control:hover,
+.form-control:visited,
+.form-control:checked,
+.form-control {
+  color: #363434 !important;
 }
