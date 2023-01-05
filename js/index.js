@@ -14,7 +14,7 @@ let day = days[now.getDay()];
 let hours = now.getHours();
 let minutes = now.getMinutes();
 
-dayTime.innerHTML = `${day}${hours}:${minutes}`;
+dayTime.innerHTML = `${day} ${hours}:${minutes}`;
 
 function displayWeather(response) {
   let temperature = Math.round(response.data.main.temp);
@@ -27,7 +27,7 @@ function displayWeather(response) {
   precipitationElement.innerHTML = `${precipitation}`;
   let wind = response.data.wind.speed;
   let windElement = document.querySelector("#wind");
-  windElement.innerHTML = `${wind}`;
+  windElement.innerHTML = ` ${wind}`;
 }
 
 function searchWeather() {
