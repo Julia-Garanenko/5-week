@@ -52,13 +52,27 @@
             <ul class="list-group">
               <li class="list-group-item" id="cityName">City</li>
               <li class="list-group-item" id="day-time">Day time</li>
-              <li class="list-group-item">Weather</li>
+              <li class="list-group-item weather-descr" id="weather-descr">
+                Weather
+              </li>
             </ul>
           </div>
           <div class="row">
-            <div class="col-8 current-degree" id="currentDegree">
-              Current degree
+            <div class="col-8">
+              <div class="clearfix weather-temperature">
+                <img
+                  src=""
+                  alt="Clear"
+                  id="icon"
+                  class="float-left position-lest"
+                />
+                <div class="float-left">
+                  <strong class="current-degree" id="currentDegree"></strong
+                  ><span class="units"> °C</span>
+                </div>
+              </div>
             </div>
+
             <div class="col-4">
               <ul class="list-group">
                 <li class="list-group-item">

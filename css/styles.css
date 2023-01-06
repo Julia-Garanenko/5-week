@@ -54,3 +54,20 @@ body {
 .form-control {
   color: #363434 !important;
 }
+
+.weather-descr {
+  text-transform: capitalize;
+}
+.weather-temperature img {
+  margin-right: 5px;
+  height: 80px;
+  width: 80px;
+}
+.weather-temperature .units {
+  position: relative;
+  font-size: 16px;
+  top: -11px;
+}
+.position-lest {
+  float: left;
+}
