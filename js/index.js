@@ -1,24 +1,19 @@
-let dayTime = document.querySelector("#day-time");
-let now = new Date();
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednsday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-let day = days[now.getDay()];
-let hours = now.getHours();
-if (hours < 10) {
-  hours = `0${hours}`;
+function formatToday(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  let dayString = days[day];
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  return `${dayString} ${hours}:${minutes}`;
 }
-let minutes = now.getMinutes();
-if (minutes < 10) {
-  minutes = `0${minutes}`;
-}
-dayTime.innerHTML = `${day} ${hours}:${minutes}`;
 
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
@@ -30,7 +25,6 @@ function formatDay(timestamp) {
 function displayForecast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
-
   let forecastHTML = `<div class="row">`;
 
   forecast.forEach(function (forecastDay, index) {
@@ -74,6 +68,10 @@ function getForecast(coordinates) {
 function displayWeather(response) {
   console.log(response.data);
 
+  let dayTime = response.data.dt;
+  let dayTimeElement = document.querySelector("#day-time");
+  dayTimeElement.innerHTML = formatToday(dayTime);
+
   let temperature = Math.round(response.data.main.temp);
   let temperatureElement = document.querySelector("#currentDegree");
   temperatureElement.innerHTML = `${temperature}`;
@@ -101,6 +99,7 @@ function displayWeather(response) {
 
 function searchWeather() {
   let cityInput = document.querySelector("#cityInput");
+
   let apiKey = "f80d03d38a44bb2e66b61aafc4bf8047";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput.value}&appid=${apiKey}&units=metric`;
 
@@ -125,4 +124,6 @@ function searchCurrentWeather() {
 let linkCurrent = document.querySelector("#button-current");
 linkCurrent.addEventListener("click", searchCurrentWeather);
 
+document.querySelector("#cityInput").value = "Paris";
+searchWeather();
 displayForecast();
